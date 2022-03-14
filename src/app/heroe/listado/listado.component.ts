@@ -9,13 +9,13 @@ export class ListadoComponent {
 
   heroes:string[] = ['Spiderman','Ironman','Thor','Hulk','Capitan America','Antman'];
   heroesDeleted:string[] = [];
-  heroeDeleted:string|undefined = "";
+  heroeDeleted:string = "";
 
   borrarHeroe():void {
-    this.heroeDeleted = this.heroes.pop(); // borra el primer elemento
+    this.heroeDeleted = this.heroes.pop()!; // borra el primer elemento
     //let heroe = this.heroes.pop(); // borra el ultimo elemento
-    alert("Has borrado a " + heroeDeleted);
-    this.heroesDeleted.push(heroeDeleted);
+    //alert("Has borrado a " + this.heroeDeleted);
+    this.heroesDeleted.push(this.heroeDeleted);
   }
 
 }
